@@ -113,6 +113,7 @@
 <Button
     android:id="@+id/buttonLogin"
     android:text="Entrar"
+    android:backgroundTint="@color/vegetacion"
     app:layout_constraintTop_toBottomOf="@+id/passwordInputLogin"
     app:layout_constraintStart_toStartOf="@id/LineLeft"
     app:layout_constraintEnd_toStartOf="@id/LineRight"
@@ -122,6 +123,7 @@
     <Button
         android:id="@+id/buttonSignUp"
         android:text="Registrar"
+        android:backgroundTint="@color/vegetacion"
         app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
         app:layout_constraintStart_toStartOf="@id/LineLeft"
         app:layout_constraintEnd_toStartOf="@id/LineRight"
@@ -130,22 +132,36 @@
 
     <CheckBox
         android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Recuerdame"
+        android:textSize="14dp"
+        android:textColor="@color/black"
         android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/mitadLine"
         app:layout_constraintStart_toStartOf="@+id/LineLeft"
         app:layout_constraintTop_toBottomOf="@+id/buttonSignUp" />
 
     <TextView
         android:id="@+id/alertDialog"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Olvidé mi contraseña"
+        android:textSize="14dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
 
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/LineRight"
+        app:layout_constraintStart_toStartOf="@+id/mitadLine"
         app:layout_constraintTop_toBottomOf="@+id/buttonSignUp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mitadLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
