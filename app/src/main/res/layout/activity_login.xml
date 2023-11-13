@@ -113,7 +113,7 @@
         android:id="@+id/buttonLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/vegetacion"
+        android:backgroundTint="@color/md_theme_dark_tertiaryContainer"
         android:text="Entrar"
         app:layout_constraintEnd_toStartOf="@id/LineRight"
         app:layout_constraintHorizontal_bias="0.0"
@@ -123,7 +123,7 @@
     <Button
         android:id="@+id/buttonSignUp"
         android:text="Registrar"
-        android:backgroundTint="@color/vegetacion"
+        android:backgroundTint="@color/md_theme_light_primary"
         app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
         app:layout_constraintStart_toStartOf="@id/LineLeft"
         app:layout_constraintEnd_toStartOf="@id/LineRight"
@@ -162,6 +162,17 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/autoriaLicencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Hikers by Diego Manjarrez"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSignUp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
