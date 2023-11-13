@@ -17,14 +17,15 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 
 public class Login extends AppCompatActivity {
-
+    TextView animName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         TextView alert =findViewById(R.id.alertDialog);
         alert.setPaintFlags(alert.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-
+        animName = findViewById(R.id.appNameLogin);
+        animHikers();
         alert.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
@@ -41,6 +42,7 @@ public class Login extends AppCompatActivity {
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        animHikers();
                         Toast.makeText(Login.this, "PUTO", Toast.LENGTH_SHORT).show();
                         dialogInterface.cancel();
                     }
@@ -50,19 +52,19 @@ public class Login extends AppCompatActivity {
     }
 });
 
-        TextView animUsername = findViewById(R.id.appNameLogin);
-
-
-        animUsername.setOnClickListener(new View.OnClickListener() {
+        animName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
-                Animation fadeAnimation = AnimationUtils.loadAnimation(Login.this, R.anim.translate_login);
-                animUsername.startAnimation(fadeAnimation);
-
+                animHikers();
             }
         });
+        TextView animUsername = findViewById(R.id.editTextLogin);
+
+
+
+
+
+
         ImageView background = findViewById(R.id.backgroundSplash);
         background.setAlpha(0.15f);
 
@@ -73,4 +75,9 @@ public class Login extends AppCompatActivity {
                .into(background);
 
     }
+    public void animHikers(){
+        Animation fadeAnimation = AnimationUtils.loadAnimation(Login.this, R.anim.translate_login);
+        animName.startAnimation(fadeAnimation);
+    }
+
 }
