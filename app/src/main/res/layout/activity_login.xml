@@ -26,7 +26,7 @@
         android:id="@+id/logoLogin"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
-        android:src="@drawable/huella"
+        android:src="@drawable/huella_login"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,12 +51,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@color/white"
 
         app:layout_constraintEnd_toStartOf="@+id/LineRight"
         app:layout_constraintStart_toStartOf="@+id/LineLeft"
         app:layout_constraintTop_toBottomOf="@id/appNameLogin"
         app:startIconDrawable="@drawable/ic_persona">
+
+
         <!--
        Si coloco el fondo de blanco, elimino las líneas  del login.
           -->
@@ -67,7 +68,6 @@
             android:id="@+id/editTextLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
             android:hint="Username"
             android:inputType="textPersonName" />
 
@@ -78,7 +78,6 @@
         android:id="@+id/passwordInputLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         app:layout_constraintTop_toBottomOf="@id/usernameInputLogin"
         app:layout_constraintStart_toStartOf="@id/LineLeft"
         app:layout_constraintEnd_toEndOf="@id/LineRight"
@@ -91,7 +90,6 @@
             android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
             android:hint="Password"
             android:inputType="textPassword" />
 
@@ -110,15 +108,17 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     app:layout_constraintGuide_percent="0.1"/>
-<Button
-    android:id="@+id/buttonLogin"
-    android:text="Entrar"
-    android:backgroundTint="@color/vegetacion"
-    app:layout_constraintTop_toBottomOf="@+id/passwordInputLogin"
-    app:layout_constraintStart_toStartOf="@id/LineLeft"
-    app:layout_constraintEnd_toStartOf="@id/LineRight"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/vegetacion"
+        android:text="Entrar"
+        app:layout_constraintEnd_toStartOf="@id/LineRight"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/LineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
 
     <Button
         android:id="@+id/buttonSignUp"
@@ -135,26 +135,26 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Recuerdame"
-        android:textSize="14dp"
         android:textColor="@color/black"
+        android:textSize="14dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/mitadLine"
         app:layout_constraintStart_toStartOf="@+id/LineLeft"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSignUp" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordInputLogin" />
 
     <TextView
         android:id="@+id/alertDialog"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Olvidé mi contraseña"
-        android:textSize="14dp"
         android:textAlignment="center"
         android:textColor="@color/black"
+        android:textSize="14dp"
 
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
         app:layout_constraintEnd_toStartOf="@+id/LineRight"
-        app:layout_constraintStart_toStartOf="@+id/mitadLine"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSignUp" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordInputLogin" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/mitadLine"
