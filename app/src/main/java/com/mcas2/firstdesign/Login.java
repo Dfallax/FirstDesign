@@ -25,7 +25,11 @@ public class Login extends AppCompatActivity {
         TextView alert =findViewById(R.id.alertDialog);
         alert.setPaintFlags(alert.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         animName = findViewById(R.id.appNameLogin);
+        TextView animUsername = findViewById(R.id.editTextLogin);
+
         animHikers();
+
+
         alert.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
@@ -43,14 +47,13 @@ public class Login extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         animHikers();
-                        Toast.makeText(Login.this, "PUTO", Toast.LENGTH_SHORT).show();
                         dialogInterface.cancel();
-                    }
-                });
+                            }
+                      });
                 AlertDialog title = alerta.create();
                 title.show();
-    }
-});
+                }
+            });
 
         animName.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,15 +61,10 @@ public class Login extends AppCompatActivity {
                 animHikers();
             }
         });
-        TextView animUsername = findViewById(R.id.editTextLogin);
-
-
-
-
 
 
         ImageView background = findViewById(R.id.backgroundSplash);
-        background.setAlpha(0.15f);
+        background.setAlpha(0.05f);
 
        Glide.with(this)
                .load("https://images.unsplash.com/photo-1599811392833-a39014faf967?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
