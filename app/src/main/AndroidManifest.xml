@@ -9,11 +9,11 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/huella"
+
         android:label="@string/app_name"
-        android:roundIcon="@drawable/huella"
+
         android:supportsRtl="true"
-        android:theme="@style/Base.Theme.FirstDesign"
+        android:theme="@style/Theme.Material3.Light.NoActionBar"
         tools:targetApi="31" >
         <activity
             android:name=".Login"
@@ -22,7 +22,7 @@
         <activity
             android:name=".SplashScreen"
             android:exported="true"
-            android:theme="@style/SplashScreenTheme"
+            android:theme="@style/Theme.Material3.Dark.NoActionBar"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

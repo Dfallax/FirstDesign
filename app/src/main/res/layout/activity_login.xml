@@ -29,6 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
+        android:textColor="@color/blue_lake"
         app:layout_constraintTop_toBottomOf="@id/logoLogin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,6 +43,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:textColor="@color/white"
 
         app:layout_constraintEnd_toStartOf="@+id/LineRight"
         app:layout_constraintStart_toStartOf="@+id/LineLeft"
@@ -55,7 +57,7 @@
 
 
         <EditText
-
+android:textColor="@color/white"
             android:id="@+id/editTextLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -122,11 +124,12 @@
         android:layout_height="wrap_content"/>
 
     <CheckBox
+        android:shadowColor="@color/white"
         android:id="@+id/checkBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Recuerdame"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="14dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/mitadLine"
@@ -139,7 +142,7 @@
         android:layout_height="wrap_content"
         android:text="Olvidé mi contraseña"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="14dp"
 
         android:textStyle="bold"
@@ -159,7 +162,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Hikers by Diego Manjarrez"
+        android:text="Space by Diego Manjarrez"
+        android:textColor="@color/white"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -173,7 +177,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="50dp"
-        app:srcCompat="@drawable/senderismo"
+        app:srcCompat="@drawable/astronauta"
        />
 
 
