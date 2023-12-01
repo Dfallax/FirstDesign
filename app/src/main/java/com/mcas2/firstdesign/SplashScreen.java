@@ -26,10 +26,8 @@ public class SplashScreen extends AppCompatActivity {
         TextView appNameSplash = findViewById(R.id.appNameSplash);
 
         Animation fadeAnimation = AnimationUtils.loadAnimation(this, R.anim.fade_in);
-        appNameSplash.startAnimation(fadeAnimation);
+        logoSplash.startAnimation(fadeAnimation);
 
-        Animation shakeAnimation = AnimationUtils.loadAnimation(this, R.anim.shake);
-        logoSplash.startAnimation(shakeAnimation);
 
         ImageView background = findViewById(R.id.backgroundSplash);
         Glide.with(this)
@@ -47,6 +45,7 @@ public class SplashScreen extends AppCompatActivity {
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
+                overridePendingTransition(R.anim.arriba, R.anim.abajo);
             }
         }, 3000);
     }
